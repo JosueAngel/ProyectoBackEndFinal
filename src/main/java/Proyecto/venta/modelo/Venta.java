@@ -31,7 +31,7 @@ public class Venta {
 	private Date fechaVenta;
 
 	@Column(name="Cantidad")
-	private Long Cantidad;
+	private String cantidadVenta;
 	
 	@Column(name="Tipo_comprobante")
 	private String tipoComprobante;
@@ -40,7 +40,7 @@ public class Venta {
 	private String totalVenta;
 	
 	@Column(name="Estado")
-	private String EstadoVenta;
+	private String estadoVenta;
 	
 	
 	
@@ -48,15 +48,15 @@ public class Venta {
 	}
 	
 	public Venta(Long idVenta, String nombreCliente, Date fechaVenta,  
-			Long Cantidad, String tipoComprobante, String totalVenta, String EstadoVenta) 
+			String cantidadVenta, String tipoComprobante, String totalVenta, String estadoVenta) 
 	{	
 		this.idVenta = idVenta;
 		this.nombreCliente = nombreCliente;
 		this.fechaVenta = fechaVenta;
-		this.Cantidad = Cantidad;
+		this.cantidadVenta=cantidadVenta;
 		this.tipoComprobante = tipoComprobante;
 		this.totalVenta = totalVenta;
-		this.EstadoVenta = EstadoVenta;
+		this.estadoVenta=estadoVenta;
 	}
 
 	public Long getIdVenta() {
@@ -83,12 +83,12 @@ public class Venta {
 		this.fechaVenta = fechaVenta;
 	}
 
-	public Long getCantidad() {
-		return Cantidad;
+	public String getCantidadVenta() {
+		return cantidadVenta;
 	}
 
-	public void setCantidad(Long cantidad) {
-		Cantidad = cantidad;
+	public void setCantidadVenta(String cantidadVenta) {
+		this.cantidadVenta = cantidadVenta;
 	}
 
 	public String getTipoComprobante() {
@@ -108,12 +108,18 @@ public class Venta {
 	}
 
 	public String getEstadoVenta() {
-		return EstadoVenta;
+		return estadoVenta;
 	}
 
 	public void setEstadoVenta(String estadoVenta) {
-		EstadoVenta = estadoVenta;
+		this.estadoVenta = estadoVenta;
 	}
+
+	
+
+	
+	
+	
 	
 	
 	
